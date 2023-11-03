@@ -18,8 +18,12 @@ struct CardView: View {
                 Label("\(scrum.attendees.count)", systemImage: "person.3")
                 Spacer()
                 Label("Label", systemImage: "clock")
+                    .padding(.trailing, 20)
             }
+            .font(.caption)
         }
+        .padding()
+        .foregroundColor(scrum.theme.accentColor)
     }
 }
 struct CardView_Previews: PreviewProvider {
