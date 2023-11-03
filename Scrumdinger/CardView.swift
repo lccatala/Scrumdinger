@@ -18,7 +18,7 @@ struct CardView: View {
                 Label("\(scrum.attendees.count)", systemImage: "person.3")
                 Spacer()
                 Label("Label", systemImage: "clock")
-                    .padding(.trailing, 20)
+                    .labelStyle(.trailingIcon)
             }
             .font(.caption)
         }
@@ -26,6 +26,7 @@ struct CardView: View {
         .foregroundColor(scrum.theme.accentColor)
     }
 }
+
 struct CardView_Previews: PreviewProvider {
     static var scrum = DailyScrum.sampleData[0]
     static var previews: some View {
